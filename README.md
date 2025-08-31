@@ -1,3 +1,4 @@
+![Project Header](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/c3b866fef33b6020132bdceec3dad51faccf128b/project%20images/project%20header.png)
 # Airbnb NYC Data Analysis Project
 
 This repository presents an **end-to-end Python + SQL data analysis pipeline** applied to Airbnb listings data in New York City. The workflow begins with **data loading, cleaning, and preliminary exploration in Python**, transitions into **SQL-driven analytical queries**, and culminates in **visualizations and actionable insights** about the NYC Airbnb market.
@@ -10,6 +11,8 @@ New York City hosts one of the largest Airbnb markets globally, with thousands o
 
 The project addresses the question:  
 **"How can we comprehensively analyze NYC Airbnb listings to uncover patterns in pricing, room types, availability, reviews, host activity, and neighborhood dynamics, producing actionable insights for hosts, renters, and market analysts?"**
+
+![NYC MAP](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/c3b866fef33b6020132bdceec3dad51faccf128b/project%20images/nyc-map.png)
 
 ## Project Goals
 
@@ -411,3 +414,5 @@ Methodological inspiration from standard industry analytics workflows and open-s
 
 ## Author - *Mayank Ahuja*
 This project is part of my portfolio, demonstrating Python and SQL skills applied to Airbnb listings in New York City, highlighting the ability to extract actionable insights from complex datasets.
+
+![NYC](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/c3b866fef33b6020132bdceec3dad51faccf128b/project%20images/nyc.png)
