@@ -1,5 +1,8 @@
 ![Project Header](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/c3b866fef33b6020132bdceec3dad51faccf128b/project%20images/project%20header.png)
-<h3 align = "center">🗽🌇 New York City Airbnb Listings: Market Analysis & Insights 🏙️🗽</h3>
+<h2 align = "center">🗽🌇 New York City Airbnb Listings: Market Analysis & Insights 🏙️🗽</h2>
+
+
+
 
 ## 🏡 Project Overview
 
