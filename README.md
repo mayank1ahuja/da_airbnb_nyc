@@ -1,13 +1,13 @@
 ![Project Header](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/c3b866fef33b6020132bdceec3dad51faccf128b/project%20images/project%20header.png)
-<h1 align = "center"> Airbnb NYC Data Analysis Project </h1>
+<h1 align = "center">🗽🌇 New York City Airbnb Listings: Market Analysis & Insights 🏙️🗽</h1>
 
-## Project Overview
+## 🏡 Project Overview
 
 This repository presents an **end-to-end Python + SQL data analysis pipeline** applied to Airbnb listings data in New York City. The workflow begins with **data loading, cleaning, and preliminary exploration in Python**, transitions into **SQL-driven analytical queries**, and culminates in **visualizations and actionable insights** about the NYC Airbnb market.
 
 The purpose of this project is to **demonstrate fluency in Python and SQL for analytics**, while producing a **portfolio-ready artifact that communicates analytical reasoning and professionalism**.
 
-## Problem Statement
+## 🏬 Problem Statement
 
 New York City hosts one of the largest Airbnb markets globally, with thousands of listings distributed across multiple boroughs and neighborhoods. For **prospective hosts, renters, and analysts**, understanding **pricing trends, room type distributions, host behavior, and neighborhood activity** is crucial for decision-making.
 
@@ -16,13 +16,13 @@ The project addresses the question:
 
 ![NYC MAP](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/c3b866fef33b6020132bdceec3dad51faccf128b/project%20images/nyc-map.png)
 
-## Project Goals
+## 🏤 Project Goals
 
 1. Demonstrate analytical fluency in both Python (for data cleaning, exploration, and visualization) and SQL (for querying, aggregation, and business insights).
 2. Produce actionable insights regarding NYC Airbnb listings: identifying popular neighborhoods, pricing trends, host activity, room type distribution, and demand patterns.
 3. Create a portfolio-ready artifact that communicates professionalism, correctness, and a structured analytical workflow.
 
-## Dataset
+## 🏠 Dataset
 
 - *Source:* [Kaggle](https://www.kaggle.com) 
 - *Download:* [AB_NYC_2019.csv](https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data)
@@ -30,9 +30,9 @@ The project addresses the question:
 The dataset contains both categorical and numerical features, with missing values and outliers, which mirrors real-world analytical challenges.
 
 
-## Workflow
+## 🏢 Workflow
 
-### Step 0: Loading Dependencies
+### 🏘️ Step 0: Loading Dependencies
 ```python
 import pandas as pd
 import numpy as np
@@ -40,14 +40,14 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 ```
 
-### Step 1: Loading Data
+### 🏘️ Step 1: Loading Data
 ```python
 df = pd.read_csv('AB_NYC_2019.csv',
  encoding_errors = 'ignore',
  on_bad_lines = 'skip')
 ```
 
-### Step 2: Initial Data Exploration
+### 🏘️ Step 2: Initial Data Exploration
 ```python
 df.head(3)
 df.shape
@@ -55,7 +55,7 @@ df.info()
 df.describe()
 ```
 
-### Step 3: Data Cleaning
+### 🏘️ Step 3: Data Cleaning
 ```python
 #replacing the null value of 'last_review' and 'review_per_month' with 0
 df['last_review'].fillna(0, inplace = True)
@@ -71,8 +71,8 @@ df['last_review'] = pd.to_datetime(df['last_review'], errors = 'coerce')
 df.to_csv('AB_NYC_2019_cleaned', index = False)
 ```
 
-### Step 4: Exploratory Data Analysis
-#### Analysing Distribution
+### 🏘️ Step 4: Exploratory Data Analysis
+#### 🗂️ Analysing Distribution
 To understand the characteristics of NYC Airbnb listings, we start by examining the distributions of key numerical variables. Visualizing these distributions allows us to identify typical values, spotting patterns, and detecting extreme outliers.
 
 1. Distribution of Prices 
@@ -135,7 +135,7 @@ plt.title('Distribution of Availibility')
 
 Using the describe table we observe that the listings have an average availibility of 112 days, with 365 days being the maximum and 0 days being the minimum. The graph shows some peaks around 30 days, 90 days and 180 days, but most of these listings aren't available for even a single day.
 
-#### Analysing Categorical Features
+#### 🗂️ Analysing Categorical Features
 After examining numerical distributions, we now explore categorical aspects of the dataset. These visualizations help us understand how listings are distributed across room types and boroughs, which provides insight into host preferences and market trends.
 
 1. Listings by room type
@@ -168,7 +168,7 @@ plt.ylabel('Number of Listings')
 
 Using the graph, we interpret that Manhattan has the largest amount of listings, while Staten Island has the rarest of listings.
 
-#### Advanced Exploratory Visualizations
+#### 🗂️ Advanced Exploratory Visualizations
 To gain deeper insights into the NYC Airbnb market, we now explore geographical patterns, cross-category distributions, and price trends. These visualizations provide a richer understanding of how listings vary by location, room type, and pricing.
 
 1. Distribution of listings by latitude and longitude
@@ -213,7 +213,7 @@ plt.ylim(0, 1000)
 
 Using the graph, we deduce that Entire home/apt room types tend to have higher prices with many clustered in the moderate price range and a few extreme outliers. Private rooms have moderate prices, generally lower than entire homes/apts. Shared rooms are the cheapest, with prices concentrated at the lower end.
 
-### Step 5: Connecting to PostgreSQL
+### 🏘️ Step 5: Connecting to PostgreSQL
 ```python
 #importing psycopg2
 import psycopg2
@@ -257,7 +257,7 @@ CREATE TABLE listings (
 conn.commit() 
 ```
 
-### Step 6: SQL-Based EDA
+### 🏘️ Step 6: SQL-Based EDA
 
 1. Count of listings per borough
 ```sql
@@ -451,7 +451,7 @@ ORDER BY total_listings DESC;
   <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_14.png">
 </p>
 
-### Step 7: Visualising SQL Queries
+### 🏘️ Step 7: Visualising SQL Queries
 1. Query Number 5: Top 10 busiest hosts 
 ```sql
 SELECT host_name,
@@ -476,7 +476,7 @@ LIMIT 10;
 
 ![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/query_11.png)
 
-## Key Results & Insights
+## ✨ Key Results & Insights
 
 1. **Geography & concentration:** Manhattan and Brooklyn account for the majority of listings; several neighborhoods show clear clustering and higher-than-average prices.
 2. **Room type economics:** Entire homes/apartments make up the plurality of listings and command the highest average prices; private rooms and shared rooms are materially cheaper.
@@ -489,18 +489,18 @@ LIMIT 10;
 2. **From signal to inference:** EDA and SQL queries quantify supply, price, and activity by borough, neighborhood, room type, and host.
 3. **From inference to action:** The final recommendations translate analytical findings into practical tactics (pricing heuristics, neighborhood prioritization, host segmentation) that a host or analyst could implement.
 
-## Requirements
+## 🛠️ Requirements
 - Python 3.8+
 - Jupyter Notebook or Jupyter Lab
 - Python Libraries: *pandas, numpy, seaborn, matplotlib*
 - PostgreSQL (optional if you want to run SQL step locally)
 - psycopg2 (if connecting Python to PostgreSQL)
 
-## Limitations & Assumptions
+## 🏨 Limitations & Assumptions
 1. **Occupancy proxy:** ```availability_365``` is used as a proxy for occupancy patterns; this is an approximation and subject to reservation/cancellation nuances.
 2. **Reviews as demand signal:** ```reviews_per_month``` is an imperfect demand proxy (not every stay generates a review). This limitation is noted and conclusions are thus presented conservatively.
 
-## Acknowledgements
+## 🏣 Acknowledgements
 - *Dataset*: Kaggle — AB_NYC_2019.csv
 - *Libraries*: pandas, seaborn, matplotlib, psycopg2
 - *Database*: PostgreSQL
@@ -508,7 +508,7 @@ LIMIT 10;
 
 Methodological inspiration from standard industry analytics workflows and open-source examples.
 
-## Author - *Mayank Ahuja*
+## 🗽 Author - *Mayank Ahuja*
 This project is part of my portfolio, demonstrating Python and SQL skills applied to Airbnb listings in New York City, highlighting the ability to extract actionable insights from complex datasets.
 
 ![NYC](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/c3b866fef33b6020132bdceec3dad51faccf128b/project%20images/nyc.png)
