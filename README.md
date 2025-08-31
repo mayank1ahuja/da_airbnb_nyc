@@ -249,6 +249,8 @@ GROUP BY neighbourhood_group
 ORDER BY total_listings DESC;
 ```
 
+![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_1.png)
+
 2. Average price per room type
 ```sql
 SELECT room_type,
@@ -257,6 +259,8 @@ FROM listings
 GROUP BY room_type
 ORDER BY avg_price DESC;
 ```
+
+![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_2.png)
 
 3. Top 5 most expensive listings
 ```sql
@@ -269,6 +273,8 @@ ORDER BY price DESC
 LIMIT 5;
 ```
 
+![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_3.png)
+
 4. Listings with more than 100 reviews
 ```sql
 SELECT name,
@@ -278,6 +284,8 @@ FROM listings
 WHERE number_of_reviews > 100
 ORDER BY number_of_reviews DESC;
 ```
+
+![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_4.png)
 
 5. Top 10 busiest hosts 
 ```sql
@@ -289,6 +297,8 @@ ORDER BY total_listings DESC
 limit 10;
 ```
 
+![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_5.png)
+
 6. Average reviews per month by room type
 ```sql
 SELECT room_type,
@@ -297,6 +307,8 @@ FROM listings
 GROUP BY room_type
 ORDER BY avg_reviews_per_month DESC;
 ```
+
+![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_6.png)
 
 7. Minimum, Maximum, and Average price per borough
 ```sql
@@ -309,6 +321,8 @@ GROUP BY neighbourhood_group
 ORDER BY avg_price DESC;
 ```
 
+![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_7.png)
+
 8. Average number of reviews per borough
 ```sql
 SELECT neighbourhood_group AS borough,
@@ -317,6 +331,8 @@ FROM listings
 GROUP BY neighbourhood_group
 ORDER BY avg_reviews DESC;
 ```
+
+![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_8.png)
 
 9. Number of listings with 0 availability  per borough
 ```sql
@@ -328,6 +344,8 @@ GROUP BY neighbourhood_group
 ORDER BY unavailable_listings DESC;
 ```
 
+![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_9.png)
+
 10. Average minimum nights per room type 
 ```sql
 SELECT room_type, 
@@ -336,6 +354,8 @@ FROM listings
 GROUP BY room_type
 ORDER BY avg_min_nights DESC;
 ```
+
+![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_10.png)
 
 11. Top 10 neighbourhoods with most listings
 ```sql
@@ -347,6 +367,8 @@ ORDER BY total_listings DESC
 LIMIT 10;
 ```
 
+![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_11.png)
+
 12. Number of listings with zero reviews per room type
 ```sql
 SELECT room_type, 
@@ -357,6 +379,8 @@ GROUP BY room_type
 ORDER BY zero_review_listings DESC;
 ```
 
+![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_12.png)
+
 13. Average reviews per month vs room type (show popularity trend)
 ```sql
 SELECT room_type, 
@@ -365,6 +389,8 @@ FROM listings
 GROUP BY room_type
 ORDER BY avg_reviews_per_month DESC;
 ```
+
+![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_13.png)
 
 14. Hosts with more than 5 listings
 ```sql
@@ -375,6 +401,8 @@ GROUP BY host_name
 HAVING COUNT(*) > 5
 ORDER BY total_listings DESC;
 ```
+
+![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_14.png)
 
 ### Step 7: Visualising SQL Queries
 1. Query Number 5: Top 10 busiest hosts 
