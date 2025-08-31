@@ -95,11 +95,7 @@ plt.title('Distribution of Prices')
   <img src = "https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/distribution%20of%20prices.png">
 </p>
 
-**Using the describe table we observe that:**
-**- the average price comes out to be $152.72.**
-**- the maximum price of an ABnB is $10,000, while**
-**- the minimum price is $0.**
-**The subsequent graph of the price column informs us that most of the ABnB are priced less that $500 hence the right-skewed graph.**
+**Using the describe table we observe that: the average price comes out to be $152.7, the maximum price of an ABnB is $10,000, while the minimum price is $0. The subsequent graph of the price column informs us that most of the ABnB are priced less that $500 hence the right-skewed graph.**
 
 2. Distribution of the Number of Reviews
 Next, we look at the number of reviews per listing to gauge host popularity and listing activity. This visualization highlights how frequently listings are being reviewed.
