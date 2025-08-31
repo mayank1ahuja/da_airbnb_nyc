@@ -79,7 +79,9 @@ df.to_csv('AB_NYC_2019_cleaned', index = False)
 ---
 
 ### 🏘️ Step 4: Exploratory Data Analysis
-#### 📊 Analysing Distribution
+
+
+## 📊 Analysing Distribution
 To understand the characteristics of NYC Airbnb listings, we start by examining the distributions of key numerical variables. Visualizing these distributions allows us to identify typical values, spotting patterns, and detecting extreme outliers.
 
 1. Distribution of Prices 
@@ -142,7 +144,8 @@ plt.title('Distribution of Availibility')
 
 Using the describe table we observe that the listings have an average availibility of 112 days, with 365 days being the maximum and 0 days being the minimum. The graph shows some peaks around 30 days, 90 days and 180 days, but most of these listings aren't available for even a single day.
 
-#### 📊 Analysing Categorical Features
+
+## 📊 Analysing Categorical Features
 After examining numerical distributions, we now explore categorical aspects of the dataset. These visualizations help us understand how listings are distributed across room types and boroughs, which provides insight into host preferences and market trends.
 
 1. Listings by room type
@@ -175,7 +178,8 @@ plt.ylabel('Number of Listings')
 
 Using the graph, we interpret that Manhattan has the largest amount of listings, while Staten Island has the rarest of listings.
 
-#### 📊 Advanced Exploratory Visualizations
+
+## 📊 Advanced Exploratory Visualizations
 To gain deeper insights into the NYC Airbnb market, we now explore geographical patterns, cross-category distributions, and price trends. These visualizations provide a richer understanding of how listings vary by location, room type, and pricing.
 
 1. Distribution of listings by latitude and longitude
