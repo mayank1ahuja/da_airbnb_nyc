@@ -95,11 +95,11 @@ plt.title('Distribution of Prices')
   <img src = "https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/distribution%20of%20prices.png">
 </p>
 
-Using the describe table we observe that:
-- the average price comes out to be $152.72.
-- the maximum price of an ABnB is $10,000, while
-- the minimum price is $0.
-The subsequent graph of the price column informs us that most of the ABnB are priced less that $500 hence the right-skewed graph.
+**Using the describe table we observe that:**
+**- the average price comes out to be $152.72.**
+**- the maximum price of an ABnB is $10,000, while**
+**- the minimum price is $0.**
+**The subsequent graph of the price column informs us that most of the ABnB are priced less that $500 hence the right-skewed graph.**
 
 2. Distribution of the Number of Reviews
 Next, we look at the number of reviews per listing to gauge host popularity and listing activity. This visualization highlights how frequently listings are being reviewed.
@@ -113,8 +113,7 @@ plt.title('Distribution of the Number of Reviews')
   <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/distribution%20of%20the%20number%20of%20reviews.png">
 </p>
 
-Using the describe table we observe that the average reviews per month come out to be 23.
-Moreover, the graph indicates that majority of the listings have less than 20 reviews, with a few outliers having hundreds of reviews.
+**Using the describe table we observe that the average reviews per month come out to be 23. Moreover, the graph indicates that majority of the listings have less than 20 reviews, with a few outliers having hundreds of reviews.**
 
 3. Distribution of Reviews per Month
 To further explore listing activity, we analyze reviews per month. This shows which listings are actively receiving feedback over time.
@@ -129,7 +128,7 @@ plt.title('Distribution of Reviews per Month')
   <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/distribution%20of%20reviews%20per%20month.png">
 </p>
 
-Using the describe table we observe that the average reviews per month are only 1 in number. Moreover, the graph indicates that most of these listings don't get even a single review on a per month basis.
+**Using the describe table we observe that the average reviews per month are only 1 in number. Moreover, the graph indicates that most of these listings don't get even a single review on a per month basis.**
 
 4. Distribution of Availibility
 Finally, we inspect availability throughout the year to understand how often listings are open for booking. This reveals patterns of seasonal or full-time availability.
@@ -142,7 +141,7 @@ plt.title('Distribution of Availibility')
   <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/distribution%20of%20availibility.png">
 </p>
 
-Using the describe table we observe that the listings have an average availibility of 112 days, with 365 days being the maximum and 0 days being the minimum. The graph shows some peaks around 30 days, 90 days and 180 days, but most of these listings aren't available for even a single day.
+**Using the describe table we observe that the listings have an average availibility of 112 days, with 365 days being the maximum and 0 days being the minimum. The graph shows some peaks around 30 days, 90 days and 180 days, but most of these listings aren't available for even a single day.**
 
 
 ## 📊 Analysing Categorical Features
@@ -161,10 +160,9 @@ plt.ylabel('Number of Listings')
   <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/number%20of%20listings%20by%20room%20type.png">
 </p>
 
-Next, we look at how listings are distributed across the boroughs (neighbourhood groups). This shows which areas have the highest concentration of Airbnb listings and may indicate hotspots for travelers.
 
 2. Listings by neighbourhood group
-Next, we look at how listings are distributed across the boroughs (neighbourhood groups). This shows which areas have the highest concentration of Airbnb listings and may indicate hotspots for travelers.
+Next, we look at how listings are distributed across the boroughs(neighbourhood groups). This shows which areas have the highest concentration of Airbnb listings and may indicate hotspots for travelers.
 ```python
 sns.countplot(df, x = 'neighbourhood_group', hue = 'neighbourhood_group', palette = 'Set1')
 plt.title('Number of Listings by Neighbourhood Group')
@@ -206,7 +204,7 @@ plt.ylabel('Number of Listings')
   <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/room%20type%20distribution%20by%20borough.png">
 </p>
 
-As indiated by the graph, we can clearly deduce that Brooklyn has the highest number of Private rooms, while Manhattan has the largest amount of Entire home/apt as well as Shared rooms.
+**As indiated by the graph, we can clearly deduce that Brooklyn has the highest number of Private rooms, while Manhattan has the largest amount of Entire home/apt as well as Shared rooms.**
 
 3. Price distribution by room type
 Finally, we explore pricing patterns across room types using a strip plot. This visualization highlights differences in pricing between entire homes, private rooms, and shared rooms, as well as extreme high-priced listings.
@@ -222,7 +220,7 @@ plt.ylim(0, 1000)
   <img src = "https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/price%20distribution%20by%20room%20type.png">
 </p>
 
-Using the graph, we deduce that Entire home/apt room types tend to have higher prices with many clustered in the moderate price range and a few extreme outliers. Private rooms have moderate prices, generally lower than entire homes/apts. Shared rooms are the cheapest, with prices concentrated at the lower end.
+**Using the graph, we deduce that Entire home/apt room types tend to have higher prices with many clustered in the moderate price range and a few extreme outliers. Private rooms have moderate prices, generally lower than entire homes/apts. Shared rooms are the cheapest, with prices concentrated at the lower end.**
 
 ___
 
