@@ -83,7 +83,7 @@ plt.xlim(0, 2000)
 plt.title('Distribution of Prices')
 ```
 <p align="center">
-  <img src = "https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/distribution%20of%20prices.png" alt = "Distribution of Prices" width="400"/>
+  <img src = "https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/distribution%20of%20prices.png">
 </p>
 
 Using the describe table we observe that:
@@ -100,7 +100,9 @@ plt.xlim(0, 100)
 plt.title('Distribution of the Number of Reviews')
 ```
 
-![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/distribution%20of%20the%20number%20of%20reviews.png)
+<p align="center">
+  <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/distribution%20of%20the%20number%20of%20reviews.png">
+</p>
 
 Using the describe table we observe that the average reviews per month come out to be 23.
 Moreover, the graph indicates that majority of the listings have less than 20 reviews, with a few outliers having hundreds of reviews.
@@ -114,7 +116,9 @@ plt.ylim(0, 5000)
 plt.title('Distribution of Reviews per Month')
 ```
 
-![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/distribution%20of%20reviews%20per%20month.png)
+<p align="center">
+  <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/distribution%20of%20reviews%20per%20month.png">
+</p>
 
 Using the describe table we observe that the average reviews per month are only 1 in number. Moreover, the graph indicates that most of these listings don't get even a single review on a per month basis.
 
@@ -125,7 +129,9 @@ sns.histplot(df['availability_365'])
 plt.title('Distribution of Availibility')
 ```
 
-![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/distribution%20of%20availibility.png)
+<p align="center">
+  <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/distribution%20of%20availibility.png">
+</p>
 
 Using the describe table we observe that the listings have an average availibility of 112 days, with 365 days being the maximum and 0 days being the minimum. The graph shows some peaks around 30 days, 90 days and 180 days, but most of these listings aren't available for even a single day.
 
@@ -141,7 +147,9 @@ plt.xlabel('Room Type')
 plt.ylabel('Number of Listings')
 ```
 
-![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/number%20of%20listings%20by%20room%20type.png)
+<p align="center">
+  <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/number%20of%20listings%20by%20room%20type.png">
+</p>
 
 Next, we look at how listings are distributed across the boroughs (neighbourhood groups). This shows which areas have the highest concentration of Airbnb listings and may indicate hotspots for travelers.
 
@@ -154,7 +162,9 @@ plt.xlabel('Neighbourhood Group')
 plt.ylabel('Number of Listings')
 ```
 
-![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/number%20of%20listings%20by%20neighbourhood%20group.png)
+<p align="center">
+  <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/number%20of%20listings%20by%20neighbourhood%20group.png">
+</p>
 
 Using the graph, we interpret that Manhattan has the largest amount of listings, while Staten Island has the rarest of listings.
 
@@ -168,7 +178,9 @@ sns.scatterplot(df, x = 'longitude', y = 'latitude', hue='neighbourhood_group', 
 plt.title('Geographical Distribution of Airbnb Listings in NYC')
 ```
 
-![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/geographical%20distribution%20of%20Airbnb%20listings%20in%20NYC.png)
+<p align="center">
+  <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/geographical%20distribution%20of%20Airbnb%20listings%20in%20NYC.png">
+</p>
 
 2. Distribution of room type by neighbourhood group
 Next, we examine how room types are distributed within each borough. This allows us to see, for example, which boroughs have more entire homes compared to private or shared rooms.
@@ -179,7 +191,9 @@ plt.xlabel('Borough')
 plt.ylabel('Number of Listings')
 ```
 
-![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/room%20type%20distribution%20by%20borough.png)
+<p align="center">
+  <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/room%20type%20distribution%20by%20borough.png">
+</p>
 
 As indiated by the graph, we can clearly deduce that Brooklyn has the highest number of Private rooms, while Manhattan has the largest amount of Entire home/apt as well as Shared rooms.
 
@@ -193,7 +207,9 @@ plt.ylabel('Price')
 plt.ylim(0, 1000)
 ```
 
-![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/price%20distribution%20by%20room%20type.png)
+<p align="center">
+  <img src = "https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/price%20distribution%20by%20room%20type.png">
+</p>
 
 Using the graph, we deduce that Entire home/apt room types tend to have higher prices with many clustered in the moderate price range and a few extreme outliers. Private rooms have moderate prices, generally lower than entire homes/apts. Shared rooms are the cheapest, with prices concentrated at the lower end.
 
