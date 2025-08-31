@@ -76,6 +76,7 @@ df['last_review'] = pd.to_datetime(df['last_review'], errors = 'coerce')
 
 df.to_csv('AB_NYC_2019_cleaned', index = False)
 ```
+---
 
 ### 🏘️ Step 4: Exploratory Data Analysis
 #### 📊 Analysing Distribution
