@@ -1,5 +1,5 @@
 ![Project Header](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/c3b866fef33b6020132bdceec3dad51faccf128b/project%20images/project%20header.png)
-<h1 align = "center">🗽🌇 New York City Airbnb Listings: Market Analysis & Insights 🏙️🗽</h1>
+<h3 align = "center">🗽🌇 New York City Airbnb Listings: Market Analysis & Insights 🏙️🗽</h3>
 
 ## 🏡 Project Overview
 
@@ -39,6 +39,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 ```
+---
 
 ### 🏘️ Step 1: Loading Data
 ```python
@@ -46,6 +47,7 @@ df = pd.read_csv('AB_NYC_2019.csv',
  encoding_errors = 'ignore',
  on_bad_lines = 'skip')
 ```
+---
 
 ### 🏘️ Step 2: Initial Data Exploration
 ```python
@@ -54,6 +56,7 @@ df.shape
 df.info()
 df.describe()
 ```
+---
 
 ### 🏘️ Step 3: Data Cleaning
 ```python
@@ -72,7 +75,7 @@ df.to_csv('AB_NYC_2019_cleaned', index = False)
 ```
 
 ### 🏘️ Step 4: Exploratory Data Analysis
-#### 🗂️ Analysing Distribution
+#### 📊 Analysing Distribution
 To understand the characteristics of NYC Airbnb listings, we start by examining the distributions of key numerical variables. Visualizing these distributions allows us to identify typical values, spotting patterns, and detecting extreme outliers.
 
 1. Distribution of Prices 
@@ -135,7 +138,7 @@ plt.title('Distribution of Availibility')
 
 Using the describe table we observe that the listings have an average availibility of 112 days, with 365 days being the maximum and 0 days being the minimum. The graph shows some peaks around 30 days, 90 days and 180 days, but most of these listings aren't available for even a single day.
 
-#### 🗂️ Analysing Categorical Features
+#### 📊 Analysing Categorical Features
 After examining numerical distributions, we now explore categorical aspects of the dataset. These visualizations help us understand how listings are distributed across room types and boroughs, which provides insight into host preferences and market trends.
 
 1. Listings by room type
@@ -168,7 +171,7 @@ plt.ylabel('Number of Listings')
 
 Using the graph, we interpret that Manhattan has the largest amount of listings, while Staten Island has the rarest of listings.
 
-#### 🗂️ Advanced Exploratory Visualizations
+#### 📊 Advanced Exploratory Visualizations
 To gain deeper insights into the NYC Airbnb market, we now explore geographical patterns, cross-category distributions, and price trends. These visualizations provide a richer understanding of how listings vary by location, room type, and pricing.
 
 1. Distribution of listings by latitude and longitude
@@ -213,6 +216,8 @@ plt.ylim(0, 1000)
 
 Using the graph, we deduce that Entire home/apt room types tend to have higher prices with many clustered in the moderate price range and a few extreme outliers. Private rooms have moderate prices, generally lower than entire homes/apts. Shared rooms are the cheapest, with prices concentrated at the lower end.
 
+___
+
 ### 🏘️ Step 5: Connecting to PostgreSQL
 ```python
 #importing psycopg2
@@ -256,10 +261,11 @@ CREATE TABLE listings (
 
 conn.commit() 
 ```
+___
 
 ### 🏘️ Step 6: SQL-Based EDA
 
-1. Count of listings per borough
+1. Count of Listings per Borough
 ```sql
 SELECT neighbourhood_group AS borough,
 	   COUNT(*) AS total_listings
@@ -272,7 +278,7 @@ ORDER BY total_listings DESC;
   <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_1.png">
 </p>
 
-2. Average price per room type
+2. Average Price per Room Type
 ```sql
 SELECT room_type,
 	   ROUND(AVG(price), 2) AS avg_price
@@ -285,7 +291,7 @@ ORDER BY avg_price DESC;
   <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_2.png">
 </p>
 
-3. Top 5 most expensive listings
+3. Top 5 Most Expensive Listings
 ```sql
 SELECT id,
 	   name,
@@ -300,7 +306,7 @@ LIMIT 5;
   <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_3.png">
 </p>
 
-4. Listings with more than 100 reviews
+4. Listings with More Than 100 Reviews
 ```sql
 SELECT name,
 	   neighbourhood_group,
@@ -314,7 +320,7 @@ ORDER BY number_of_reviews DESC;
   <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_4.png">
 </p>
 
-5. Top 10 busiest hosts 
+5. Top 10 Busiest Hosts 
 ```sql
 SELECT host_name,
 	   COUNT(*) AS total_listings
@@ -328,7 +334,7 @@ limit 10;
   <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_5.png">
 </p>
 
-6. Average reviews per month by room type
+6. Average Reviews per Month by Room Type
 ```sql
 SELECT room_type,
 	   ROUND(AVG(reviews_per_month),2) AS avg_reviews_per_month
@@ -341,7 +347,7 @@ ORDER BY avg_reviews_per_month DESC;
   <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_6.png">
 </p>
 
-7. Minimum, Maximum, and Average price per borough
+7. Minimum, Maximum, and Average Price per Borough
 ```sql
 SELECT neighbourhood_group AS borough,
        MIN(price) AS min_price,
@@ -356,7 +362,7 @@ ORDER BY avg_price DESC;
   <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_7.png">
 </p>
 
-8. Average number of reviews per borough
+8. Average Number of Reviews per Borough
 ```sql
 SELECT neighbourhood_group AS borough,
        ROUND(AVG(number_of_reviews),2) AS avg_reviews
@@ -369,7 +375,7 @@ ORDER BY avg_reviews DESC;
   <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_8.png">
 </p>
 
-9. Number of listings with 0 availability  per borough
+9. Number of Listings with 0 Availability per Borough
 ```sql
 SELECT neighbourhood_group AS borough,
        COUNT(*) AS unavailable_listings
@@ -383,7 +389,7 @@ ORDER BY unavailable_listings DESC;
   <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_9.png">
 </p>
 
-10. Average minimum nights per room type 
+10. Average Minimum Nights per Room Type 
 ```sql
 SELECT room_type, 
        ROUND(AVG(minimum_nights),2) AS avg_min_nights
@@ -396,7 +402,7 @@ ORDER BY avg_min_nights DESC;
   <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_10.png">
 </p>
 
-11. Top 10 neighbourhoods with most listings
+11. Top 10 Neighbourhoods with Most Listings
 ```sql
 SELECT neighbourhood, 
 	   COUNT(*) AS total_listings
@@ -410,7 +416,7 @@ LIMIT 10;
   <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_11.png">
 </p>
 
-12. Number of listings with zero reviews per room type
+12. Number of Listings with Zero Reviews per Room Type
 ```sql
 SELECT room_type, 
 	   COUNT(*) AS zero_review_listings
@@ -424,7 +430,7 @@ ORDER BY zero_review_listings DESC;
   <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_12.png">
 </p>
 
-13. Average reviews per month vs room type (show popularity trend)
+13. Average Reviews per Month v/s Room Type
 ```sql
 SELECT room_type, 
        ROUND(AVG(reviews_per_month),2) AS avg_reviews_per_month
@@ -437,7 +443,7 @@ ORDER BY avg_reviews_per_month DESC;
   <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_13.png">
 </p>
 
-14. Hosts with more than 5 listings
+14. Hosts with More than 5 Listings
 ```sql
 SELECT host_name, 
 	   COUNT(*) AS total_listings
@@ -450,9 +456,10 @@ ORDER BY total_listings DESC;
 <p align="center">
   <img src="https://github.com/mayank1ahuja/da_airbnb_nyc/blob/56643370a6b2595502c5f85861619079ebbf72d7/queries/query_14.png">
 </p>
+---
 
 ### 🏘️ Step 7: Visualising SQL Queries
-1. Query Number 5: Top 10 busiest hosts 
+1. Query Number 5: Top 10 Busiest Hosts 
 ```sql
 SELECT host_name,
 	   COUNT(*) AS total_listings
@@ -464,7 +471,7 @@ limit 10;
 
 ![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/query_5.png)
 
-2. Query Number 11: Top 10 neighbourhoods with most listings
+2. Query Number 11: Top 10 Neighbourhoods with Most Listings
 ```sql
 SELECT neighbourhood, 
 	   COUNT(*) AS total_listings
@@ -484,7 +491,7 @@ LIMIT 10;
 4. **Hosts at scale:** A significant number of hosts manage multiple listings, suggesting professionalized management in specific neighborhoods.
 5. **Outliers & data quality:** ```price```, ```minimum_nights```, and ```reviews_per_month``` contain outliers that meaningfully affect their averages.
 
-## How the Project Answers the Problem Statement
+## 📈 How the Project Answers the Problem Statement
 1. **From raw data to signal:** Data cleaning addresses missingness and obvious input errors, producing a defensible dataset for inference.
 2. **From signal to inference:** EDA and SQL queries quantify supply, price, and activity by borough, neighborhood, room type, and host.
 3. **From inference to action:** The final recommendations translate analytical findings into practical tactics (pricing heuristics, neighborhood prioritization, host segmentation) that a host or analyst could implement.
@@ -496,11 +503,11 @@ LIMIT 10;
 - PostgreSQL (optional if you want to run SQL step locally)
 - psycopg2 (if connecting Python to PostgreSQL)
 
-## 🏨 Limitations & Assumptions
+## 📑 Limitations & Assumptions
 1. **Occupancy proxy:** ```availability_365``` is used as a proxy for occupancy patterns; this is an approximation and subject to reservation/cancellation nuances.
 2. **Reviews as demand signal:** ```reviews_per_month``` is an imperfect demand proxy (not every stay generates a review). This limitation is noted and conclusions are thus presented conservatively.
 
-## 🏣 Acknowledgements
+## 🌟 Acknowledgements
 - *Dataset*: Kaggle — AB_NYC_2019.csv
 - *Libraries*: pandas, seaborn, matplotlib, psycopg2
 - *Database*: PostgreSQL
