@@ -1,5 +1,7 @@
 ![Project Header](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/c3b866fef33b6020132bdceec3dad51faccf128b/project%20images/project%20header.png)
-# Airbnb NYC Data Analysis Project
+<h1 align = "center"> Airbnb NYC Data Analysis Project </h1>
+
+## Project Overview
 
 This repository presents an **end-to-end Python + SQL data analysis pipeline** applied to Airbnb listings data in New York City. The workflow begins with **data loading, cleaning, and preliminary exploration in Python**, transitions into **SQL-driven analytical queries**, and culminates in **visualizations and actionable insights** about the NYC Airbnb market.
 
@@ -80,8 +82,9 @@ sns.histplot(df['price'])
 plt.xlim(0, 2000)
 plt.title('Distribution of Prices')
 ```
-
-![](https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/distribution%20of%20prices.png)
+<p align="center">
+  <img src = "https://github.com/mayank1ahuja/da_airbnb_nyc/blob/0b63ffa27cc7bc8337440d4e9d35cb20a2380c3f/plots/distribution%20of%20prices.png" alt = "Distribution of Prices" width="400"/>
+</p>
 
 Using the describe table we observe that:
 - the average price comes out to be $152.72.
